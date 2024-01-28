@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer{
+    max-width: 100vw;
+    min-height: 12vh;
+    display: grid;
+    place-content: center;
+    background-color: #282828;
+
+
+
+}
+.foot{
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid blue; */
+}
+
+.center{
+    font-size: x-large;
+    /* border: 1px solid black; */
+    color: whitesmoke;
+    
+}
