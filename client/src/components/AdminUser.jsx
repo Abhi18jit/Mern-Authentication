@@ -48,14 +48,14 @@ const AdminUser = () => {
 
   return (
     <>
-        <div className="t-container">
+       
           <table className='t-box'>
             <thead>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Phone No</th>
-              <th>Updation</th>
-              <th>Deletion</th>
+              <td>Name</td>
+              <td>Email</td>
+              <td>Phone No</td>
+              <td>Updation</td>
+              <td>Deletion</td>
             </thead>
 
             {userData.map((curEle, index) => {
@@ -63,13 +63,12 @@ const AdminUser = () => {
                 <td>{curEle.username}</td>
                 <td>{curEle.email}</td>
                 <td>{curEle.phone}</td>
-                <td><Link to={`/admin/users/${curEle._id}/edit`}>Edit</Link></td>
-                <td><button onClick={()=>{deleteItem(curEle._id)}}>Delete</button></td>
+                <td><Link className='edit-btn' to={`/admin/users/${curEle._id}/edit`}>Edit</Link></td>
+                <td><button className='del-btn' onClick={()=>{deleteItem(curEle._id)}}>Delete</button></td>
               </tr>)
             })}
 
           </table>
-        </div>
     </>
   )
 }

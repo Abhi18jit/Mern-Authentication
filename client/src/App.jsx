@@ -9,13 +9,14 @@ import Service from './pages/Service';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Logout from './pages/Logout';
-import AdminLayout from './components/layouts/Admin-Layout';
-import AdminUser from './pages/AdminUser';
-import AdminContact from './pages/AdminContact';
+import AdminContact from './components/AdminContact';
 import AdminEdit from './pages/Admin-Edit';
+import AdminLayout from './components/layouts/Admin-Layout';
+import AdminUser from './components/AdminUser';
+
 
 const App = () => {
-
+  
 
 
   return (
@@ -37,10 +38,10 @@ const App = () => {
           
 
           
-            <Route path="/admin" element={<AdminLayout />}>
-              <Route path="users" element={<AdminUser />} />
-              <Route path="contact" element={<AdminContact />} />
-              <Route path="users/:id/edit" element={<AdminEdit/>} />
+            <Route path="/admin">
+              <Route path="users" element={<AdminLayout Content={<AdminUser/>}/>} />
+              <Route path="contact" element={<AdminLayout Content={<AdminContact/>} />} />
+              <Route path="users/:id/edit" element={<AdminLayout Content={<AdminEdit/>} />} />
             </Route>
             
 

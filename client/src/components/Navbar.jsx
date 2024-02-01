@@ -4,7 +4,8 @@ import "./Navbar.css"
 import { useAuth } from '../contextStore/authContext'
 
 const Navbar = () => {
-    const { isLoggedIN } = useAuth();
+    const { isLoggedIN,user } = useAuth();
+    const adminStatus=user.isAdmin;
     return (
         <>
             <div className="container">
@@ -38,6 +39,12 @@ const Navbar = () => {
                                         <NavLink className={"items"} to="/register">Register</NavLink>
                                     </li>
                                 </>
+
+                            }
+                            {adminStatus ? <li className="items">
+                                <NavLink className={"items"} to="/admin/users">Admin</NavLink>
+                            </li> : <div style={{display:"none"}}></div>
+                                
 
                             }
 

@@ -82,7 +82,7 @@ html{
 
 
  .s-main-hero{
-   min-width: 100vw;
+   max-width: 100vw;
    min-height: 80vh;
    display: grid;
    place-items: center;
@@ -130,7 +130,7 @@ html{
  /* Home section  */
 
  .home-section{
-   min-width: 100vw;
+   max-width: 100vw;
    min-height:80vh;
    background-color: #282828fc;
    display: grid;
@@ -177,15 +177,75 @@ html{
  table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 50%;
+  min-width: 50%;
 }
  td, thead {
-  border: 1px solid #dddddd;
+  border: 1px solid #3e3c3c;
   text-align: left;
   padding: 8px;
+
+}
+td{
+  text-align: center;
+}
+thead{
+  color: #ffffff;
 }
 
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
  
+
+
+.admin-box{
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  list-style: none;
+  padding: 4rem;
+
+}
+
+.admin-items{
+  text-decoration: none;
+  font-size: large;
+  text-transform: capitalize;
+  color: #dddddd;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-left: 2px solid #dddddd;
+  border-bottom: 2px solid #dddddd;
+  
+}
+
+.outer{
+  max-width: 100vw;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  background-color: #282828fc;
+  padding: 3rem 0 2rem 0;
+
+}
+.out{
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+}
+
+.edit-btn{
+  color: rgb(95, 12, 12);
+  letter-spacing: 0.1rem;
+}
+.del-btn{
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(134, 0, 0);
+}

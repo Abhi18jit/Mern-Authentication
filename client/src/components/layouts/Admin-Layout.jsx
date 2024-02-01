@@ -1,21 +1,24 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 
-const AdminLayout = () => {
+const AdminLayout = ({ Content }) => {
   return (
     <>
-        
-        <header>
-          <nav>
-            <ul style={{display:"flex", flexDirection:"column"}}>
-              <li> <NavLink to="/admin/users">users </NavLink></li>
-              <li> <NavLink to="/admin/contact">contact </NavLink></li>
-              <li> <NavLink to="/admin/about">about </NavLink></li>
-              <li> <NavLink to="/admin/help">help </NavLink></li>
+
+      <div className="outer">
+        <div className="out">
+          <nav className='admin-link'>
+            <ul className='admin-box'>
+              <li> <NavLink className="admin-items" to="/admin/users">users </NavLink></li>
+              <li> <NavLink className="admin-items" to="/admin/contact">contact </NavLink></li>
+              <li> <NavLink className="admin-items" to="/admin/about">about </NavLink></li>
+              <li> <NavLink className="admin-items" to="/admin/help">help </NavLink></li>
             </ul>
           </nav>
-        </header>
-        <Outlet/>
+          {Content}
+        </div>
+      </div>
+      <Outlet />
     </>
   )
 }

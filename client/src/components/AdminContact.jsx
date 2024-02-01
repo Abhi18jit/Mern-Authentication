@@ -55,13 +55,12 @@ const AdminContact = () => {
   return (
     <>
 
-      <div className="t-container">
+      
         <table className='t-box'>
           <thead>
             <td>Name</td>
             <td>Email</td>
             <td>Message</td>
-            <td>Updation</td>
             <td>Deletion</td>
           </thead>
 
@@ -70,13 +69,11 @@ const AdminContact = () => {
               <td>{curEle.username}</td>
               <td>{curEle.email}</td>
               <td>{curEle.message}</td>
-              <td>Edit</td>
-              <td><button onClick={() => { deleteItem(curEle._id) }} >Delete</button></td>
+              <td><button className='del-btn' onClick={() => { deleteItem(curEle._id) }} >Delete</button></td>
             </tr>)
           })}
 
         </table>
-      </div>
     </>
   )
 }
